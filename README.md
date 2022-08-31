@@ -1,6 +1,8 @@
 # vue-frontend-strefa-magisterka
 
-This template should help get you started developing with Vue 3 in Vite.
+Vue 3 in Vite
+
+This project is created and maintained for master thesis purpouses.
 
 ## Recommended IDE Setup
 

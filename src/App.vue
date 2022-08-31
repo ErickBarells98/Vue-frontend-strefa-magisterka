@@ -1,19 +1,20 @@
 <script setup>
-import { RouterLink, RouterView } from 'vue-router'
+import { RouterView } from 'vue-router'
+import Navbar from './views/navbar/Navbar.vue'
+import Footer from './views/footer/Footer.vue'
 </script>
 
 <template>
-  <header>
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-      </nav>
-  </header>
-
+  <Navbar />
   <div class="main-content">
     <RouterView />
   </div>
+  
+  <Footer />
 </template>
 
 <style scoped>
-
+  .main-content{
+    min-height: 300px;
+  }
 </style>
