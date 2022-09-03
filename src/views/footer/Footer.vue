@@ -3,14 +3,14 @@
 </script>
 
 <template>
-    <div className="footer">    
-        <div className="footer-content">
-            <hr />
-            <div className="footer-credits">
+    <div class="footer">    
+        <div class="footer-content">
+            <hr class="hr--custom" />
+            <div class="footer-credits">
                 <p>&copy; 2022 Eryk Beczek</p>
             </div>
             <div class="link-div">
-              <RouterLink to="/" className='a--custom'>Deklaracja dostępności</RouterLink>
+              <RouterLink to="/" class="a--custom">Deklaracja dostępności</RouterLink>
             </div>
         </div>
     </div>
@@ -19,7 +19,7 @@
 <style scoped>
     hr{
         margin: 0; 
-        color: rgba(190, 190, 190, 0.226);
+        color: rgb(190, 190, 190);
     }
     .link-div{
         margin-right: 45px;

@@ -5,25 +5,25 @@
 
 
 <template>
-    <div className="custom-navbar">
-        <div className="custom-navbar-content">
+    <div class="custom-navbar">
+        <div class="custom-navbar-content">
             <RouterLink :to="{name: 'Home'}" class="logo-link">
                 <img :src="strefaLogo" width="100" />
             </RouterLink>
         
             <div class="custom-nav-menu-list">
-                <ul className="custom-nav-menu">
-                    <li className="custom-nav-item">
+                <ul class="custom-nav-menu">
+                    <li class="custom-nav-item">
                         <RouterLink :to="{name: 'Contact'}">Kontakt</RouterLink>
                     </li>
                 </ul>
 
-                <ul className="custom-nav-menu nav-right">
-                        <ul className="custom-nav-menu nav-right">
-                        <li className="custom-nav-item">
+                <ul class="custom-nav-menu nav-right">
+                        <ul class="custom-nav-menu nav-right">
+                        <li class="custom-nav-item">
                             <RouterLink :to="{name: 'Register'}">Zarejestruj</RouterLink>
                         </li>
-                        <li className="custom-nav-item">
+                        <li class="custom-nav-item">
                             <RouterLink :to="{name: 'Login'}">Zaloguj</RouterLink>
                         </li>
                         </ul>
