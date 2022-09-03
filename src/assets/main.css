@@ -110,6 +110,29 @@ ul{
 .footer-content p{
   margin-bottom: 0;
  }
+ 
+ /* Details CSS */
+
+.details-info > div {
+  height: 24px;
+}
+
+dl > div{
+  display: flex;
+  font-size: 14px;
+}
+
+dd{
+  width: 160px;
+  text-align: right;
+  font-weight: 550;
+}
+
+dt{
+  margin-left: 20px;
+  font-weight: 500 !important;
+}
+
 
  /* Form CSS */
 

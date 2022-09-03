@@ -1,16 +1,24 @@
 <script setup>
-    import { reactive } from 'vue'
-    import { RouterLink } from 'vue-router';
+    import { reactive, inject } from 'vue'
+    import { RouterLink, useRouter } from 'vue-router';
 
-    const form = reactive({
+    const router = useRouter();
+
+    const formValues = reactive({
         email: '',
         password: ''
     })
 
-    const handleSubmit = (event) => {
+    const { login } = inject('store');
+
+    const handleSubmit = async (event) => {
         event.preventDefault()
-        console.log(form.email);
-        console.log(form.password)
+        
+        let result = await login(formValues)
+        
+        if(!result){
+            router.push({ name: 'Home'})
+        }
     }
 
 </script>
@@ -25,7 +33,7 @@
                 <label>Email</label>
                 <b-form-input
                     id="input-email"
-                    v-model="form.email"
+                    v-model="formValues.email"
                     type="email"
                     required
                 ></b-form-input>
@@ -34,7 +42,7 @@
                 <label>Hasło</label>
                 <b-form-input
                     id="input-password"
-                    v-model="form.password"
+                    v-model="formValues.password"
                     type="password"
                     required
                 ></b-form-input>
