@@ -5,6 +5,8 @@ import Login from '../views/auth/Login.vue'
 import Register from '../views/auth/Register.vue'
 import NotFound from '../views/error/NotFound.vue'
 import Profile from '../views/profile/Profile.vue'
+import AvailableCourses from '../views/availableCourses/AvailableCourses.vue'
+import CourseDetails from '../views/course/CourseDetails.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -33,6 +35,17 @@ const router = createRouter({
       path: '/profile',
       name: 'Profile',
       component: Profile
+    },
+    {
+      path: '/course',
+      name: 'Course',
+      component: AvailableCourses
+    },
+    {
+      path: '/course/:id',
+      name: 'CourseDetails',
+      component: CourseDetails,
+      props: true
     },
     {
       path: "/:catchAll(.*)",

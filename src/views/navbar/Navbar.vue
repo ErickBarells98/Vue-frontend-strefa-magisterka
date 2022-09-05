@@ -30,7 +30,7 @@
                         <RouterLink to="/">Moje kursy</RouterLink>
                         </li>
                         <li class="custom-nav-item" v-if="isLogged">
-                        <RouterLink to="/">Dostępne kursy</RouterLink>
+                        <RouterLink :to="{name: 'Course'}">Dostępne kursy</RouterLink>
                         </li>
 
                     <li class="custom-nav-item">

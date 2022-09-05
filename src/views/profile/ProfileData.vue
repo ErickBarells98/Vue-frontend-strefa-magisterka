@@ -11,7 +11,6 @@
         jwtAxios.get('/api/MyProfile/'+userState.userid,{context:store})
         .then((response) => {
             Object.assign(userData,response.data)
-            console.log(userData)
         })
         .catch((err) => {
             console.log(err);

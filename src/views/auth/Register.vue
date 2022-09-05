@@ -1,5 +1,9 @@
 <script setup>
+    import axios from 'axios';
     import { reactive, computed } from 'vue';
+    import { useRouter } from 'vue-router';
+    
+    const router = useRouter();
 
     const form = reactive({
         email: '',
@@ -25,13 +29,37 @@
 
     const handleSubmit = (event) => {
         event.preventDefault()
-        console.log(form.email);
-        console.log(form.password);
-        console.log(form.studiesType);
-        console.log(form.studiesLvl);
-        console.log(form.semestr);
-        console.log(form.fieldOfStudy);
+        if(form.confirmPassword === form.password){
+            register();
+            router.push({ name: 'Login'})
+        }
+        else{
+            console.log("Błędnie wprowadzone dane. Upewnij się że hasło się zgadza.")
+        }
     }
+
+    const register = () => {
+        const newuser = {
+            email: form.email,
+            name: form.name,
+            surname: form.surname,
+            password: form.password,
+            studiesType: parseInt(form.studiesType),
+            studiesLvl: parseInt(form.studiesLvl),
+            semester: parseInt(form.semestr),
+            fieldOfStudy: form.fieldOfStudy
+        }
+
+        axios.post('/api/auth/register',newuser,{headers:{'Content-Type':'application/json'}})
+        .then(respone => {
+
+        })
+        .catch(err => {
+            console.log("Niepoprawnie wprowadzone dane. " + err);
+        })
+    }
+
+    
 </script>
 
 
