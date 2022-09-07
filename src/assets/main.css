@@ -188,7 +188,7 @@ ul{
  /* Details CSS */
 
 .details-info > div {
-  height: 24px;
+  height: 2%;
 }
 
 dl > div{
@@ -427,4 +427,8 @@ dt{
 }
 .background--orange{
   background-color: orange;
+}
+
+.myicon{
+  cursor: pointer;
 }

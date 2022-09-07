@@ -52,7 +52,7 @@
                             <RouterLink :to="{name: 'Profile'}">Witaj {{userState.username}}!</RouterLink>
                         </li>
                         <li class="custom-nav-item">
-                            <RouterLink to="" @click="signOut">Wyloguj</RouterLink>
+                            <RouterLink to="" @click="signOut"><font-awesome-icon icon="fa-solid fa-right-from-bracket"/> Wyloguj</RouterLink>
                         </li>
                         </ul>
                 </ul>

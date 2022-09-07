@@ -3,6 +3,8 @@
     import { useRoute, useRouter } from 'vue-router';
     import jwtAxios from '../../utils/jwtAxios';
     import store from '../../store/userstore.js';
+    import LaboratoriesList from '../laboratories/LaboratoriesList.vue';
+    import LecturesList from '../lectures/LecturesList.vue';
 
     const route = useRoute();
     const router = useRouter();
@@ -34,6 +36,7 @@
         jwtAxios.get(`/api/Course/${route.params.id}`,{context:store})
         .then(response => {
             Object.assign(courseData,response.data);
+            console.log(response.data)
         })
         .catch(err => console.log(err))
         .finally(() => {
@@ -97,7 +100,14 @@
             </dl>
 
             <div class='content-container' v-if="requestJoin === 'approved'"> 
-                Lista labów itd
+                <b-tabs content-class="mt-3">
+                    <b-tab title="Laboratoria" active>
+                            <LaboratoriesList :laboratories="courseData.Laboratories"/>
+                    </b-tab>
+                    <b-tab title="Wykłady">
+                            <LecturesList :lectures="courseData.Lectures" />
+                    </b-tab>
+                </b-tabs>
             </div>
         </div>
 
