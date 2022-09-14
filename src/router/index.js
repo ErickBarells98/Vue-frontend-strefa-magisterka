@@ -9,6 +9,7 @@ import AvailableCourses from '../views/availableCourses/AvailableCourses.vue'
 import CourseDetails from '../views/course/CourseDetails.vue'
 import LaboratoriesDetails from '../views/laboratories/LaboratoriesDetails.vue'
 import LecturesDetails from '../views/lectures/LecturesDetails.vue'
+import MyCourse from '../views/myCourses/myCourses.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -60,6 +61,11 @@ const router = createRouter({
       name: 'LecturesDetails',
       component: LecturesDetails,
       props: true
+    },
+    {
+      path: '/mycourses',
+      name: 'MyCourses',
+      component: MyCourse
     },
     {
       path: "/:catchAll(.*)",

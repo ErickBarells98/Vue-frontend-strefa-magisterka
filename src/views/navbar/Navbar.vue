@@ -27,7 +27,7 @@
                 <ul class="custom-nav-menu">
 
                         <li class="custom-nav-item" v-if="isLogged">
-                        <RouterLink to="/">Moje kursy</RouterLink>
+                        <RouterLink :to="{name: 'MyCourses'}">Moje kursy</RouterLink>
                         </li>
                         <li class="custom-nav-item" v-if="isLogged">
                         <RouterLink :to="{name: 'Course'}">Dostępne kursy</RouterLink>
