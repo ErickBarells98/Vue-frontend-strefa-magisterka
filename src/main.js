@@ -16,7 +16,7 @@ import 'bootstrap-vue-3/dist/bootstrap-vue-3.css'
 import './assets/main.css'
 
 
-axios.defaults.baseURL = 'https://localhost:44363/';
+axios.defaults.baseURL = 'https://magisterstrefaapi.azurewebsites.net/';
 axios.defaults.headers = {"Access-Control-Allow-Origin": "*"};
 
 const app = createApp(App)
