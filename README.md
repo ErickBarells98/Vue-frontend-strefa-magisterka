@@ -29,3 +29,7 @@ npm run dev
 ```sh
 npm run build
 ```
+
+## Cloud deployment
+
+Website was hosted in Azure Cloud Platform via tools available in Visual Code. Application is/was working under URL: https://react-strefa.azurewebsites.net
