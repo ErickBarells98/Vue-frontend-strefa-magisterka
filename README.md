@@ -1,5 +1,6 @@
 # vue-frontend-strefa-magisterka
 
+This project was generated with [Vite](https://github.com/vitejs/vite).
 Vue 3 in Vite
 
 This project is created and maintained for master thesis purpouses.
